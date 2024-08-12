@@ -1,4 +1,5 @@
 let timezone = parseInt(0);
+let toggle = false;
 
 function updateClock() {
     const now = new Date();
@@ -57,6 +58,27 @@ function toggleVisibility() {
     } else {
         toolsElement.style.visibility = 'visible';
         buttonElement.textContent = 'Click to hide tools';
+    }
+}
+
+function toggleTheme() {
+    const clockElement = document.getElementById('clock');
+    const bodyElement = document.body;
+    const btnSettingsElement = document.getElementById('btnSettings');
+
+    bodyElement.classList.toggle('dark');
+
+    if (toggle) {
+        clockElement.style.color = 'black';
+        btnSettingsElement.style.color = 'black';
+        bodyElement.style.backgroundColor = "#f0f0f0";
+        toggle = false;
+    } else {
+        clockElement.style.color = 'white';
+        btnSettingsElement.style.color = 'white';
+        bodyElement.style.backgroundColor = 'black';
+        btnSettingsElement
+        toggle = true;
     }
 }
 

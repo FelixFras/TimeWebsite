@@ -7,8 +7,9 @@
         <script src="script.js"></script>
         <title>Clock</title>
     </head>
-    <body>
-        <button id="settings" onclick="toggleVisibility()">Settings</button>
+    <body class="white">
+        <button id="btnSettings" onclick="toggleVisibility()">Settings</button>
+
         <div id="tools">
             <label for="btnSize">Size of the Clock: </label>
             <div id="btnSize">
@@ -22,6 +23,9 @@
             <label for="bgColor">Set the background color: </label>
             <input type="text" value="#f0f0f0" onchange="changeBgColor()" id="bgColor">
         </div>
+
+        <button id="btnToggle" onclick="toggleTheme()"><img id="imgToggle" src="/toggle.png"
+                alt="toggle theme"></button>
         <div id="clock"></div>
     </body>
 </html>
