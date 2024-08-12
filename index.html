@@ -8,10 +8,19 @@
         <title>Clock</title>
     </head>
     <body>
+        <button id="settings" onclick="toggleVisibility()">Settings</button>
         <div id="tools">
-            <button onclick="makeBigger()">+</button>
-            <button onclick="makeSmaller()">-</button>
+            <label for="btnSize">Size of the Clock: </label>
+            <div id="btnSize">
+                <button class="btnSize" onclick="makeBigger()">+</button>
+                <button class="btnSize" onclick="makeSmaller()">-</button>
+            </div>
+            <br>
+            <label for="timezone">Change the relative timezone by hours: </label>
             <input type="number" onchange="changeTimezone()" id="timezone">
+            <br>
+            <label for="bgColor">Set the background color: </label>
+            <input type="text" value="#f0f0f0" onchange="changeBgColor()" id="bgColor">
         </div>
         <div id="clock"></div>
     </body>
